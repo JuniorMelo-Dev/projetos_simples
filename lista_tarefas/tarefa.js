@@ -5,6 +5,8 @@ let janelaEdicao = document.querySelector('#janelaEdicao');
 let janelaEdicaoFundo = document.querySelector('#janelaEdicaoFundo');
 let janelaEdicaoBtnFechar = document.querySelector('#janelaEdicaoBtnFechar');
 let btnAtualizarTarefa = document.querySelector('#btnAtualizarTarefa');
+let idTarefaEdicao = document.querySelector('#idTarefaEdicao');
+let inputTarefaNomeEdicao = document.querySelector('#inputTarefaNomeEdicao');
 
 inputNovaTarefa.addEventListener('keypress', (e) => {
 
@@ -29,7 +31,27 @@ btnAddTarefa.addEventListener('click', (e) => {
         id: gerarId(),
     }
     adicionarTarefa(tarefa);
+});
 
+btnAtualizarTarefa.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    let idTarefa = idTarefaEdicao.innerHTML = '#' + idTarefa;
+
+    let tarefa = {
+        nome: inputTarefaNomeEdicao,
+        id: idTarefa
+    }
+
+    let tarefaAtual = document.getElementById('' + idTarefa + '');
+
+    if(tarefaAtual) {
+        let li = criarTagLi(tarefa);
+        listaTarefas.replaceChild(li, tarefaAtual);
+        alternarJanelaEdicao();
+    } else {
+        alert('[ERRO] Elemento HTML não encontrado!');
+    }
 });
 
 function gerarId() {
@@ -75,7 +97,11 @@ function criarTagLi(tarefa) {
 function editar(idTarefa){
     let li = document.getElementById(''+ idTarefa + '');
     if(li) {
+        idTarefaEdicao.innerHTML = '#' + idTarefa; 
+        inputTarefaNomeEdicao.value = li.innerText;
         alternarJanelaEdicao();
+    } else {
+        alert('[ERRO] Elemento HTML não encontrado!');
     }
 }
 
@@ -85,6 +111,8 @@ function excluir(idTarefa){
         let li = document.getElementById(''+ idTarefa + '');
         if(li) {
             listaTarefas.removeChild(li);
+        } else {
+            alert('[ERRO] Elemento HTML não encontrado!');
         }
     }
 }

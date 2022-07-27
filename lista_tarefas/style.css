@@ -80,6 +80,13 @@ body {
     background: #3c3a3a;
 }
 
+.textoTarefa {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 290px;
+    white-space: nowrap;
+}
+
 #janelaEdicao {
     position: fixed;
     top: 50%;
@@ -117,7 +124,7 @@ body {
 #janelaEdicaoBtnFechar {
     position: relative;
     top: -38px;
-    right: -400px;
+    right: -410px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
