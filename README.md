@@ -11,3 +11,7 @@
 ## Projeto Lista de Tarefas
 
 :one: Lista de Tarefas, com validação, edição e exclusão
+
+## Projeto Relógio Digital Dinâmico
+
+:one: Relógio Digital Estilizado
