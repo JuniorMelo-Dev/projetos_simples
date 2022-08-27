@@ -27,3 +27,7 @@
 ## Projeto Dark Mode
 
 :one: Projeto básico com função dark
+
+## Projeto Contador
+
+:one: Projeto Contador com efeito hover e coloração nos botões
