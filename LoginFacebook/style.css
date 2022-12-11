@@ -4,6 +4,9 @@
     --color-gray2: #dddfe2;
     --color-dark: #1d2129;
     --color-blue: #1b74e4;
+    --color-blue2: #166fe5;
+    --color-green: #42b72a;
+    --color-green2: #36a420;
 }
 
 body {
@@ -60,4 +63,61 @@ body {
 .inputs:focus {
     border-color: var(--color-blue);
     box-shadow: 0 0 0 2px var(--color-gray2);
+}
+
+.btn {
+    padding: 15px;
+    border: none;
+    color: var(--color-white);
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.1rem;
+    transition: .2s;
+    cursor: pointer;
+}
+
+a {
+    color: var(--color-blue);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid var(--color-gray);
+}
+
+p {
+    text-align: center;
+}
+
+.btn-enter {
+    background-color: var(--color-blue);
+}
+
+.btn-enter:hover {
+    background-color: var(--color-blue2);
+}
+
+.btn-create-account {
+    background-color: var(--color-green);
+    width: auto;
+}
+
+.btn-create-account:hover {
+    background-color: var(--color-green2);
+}
+
+h1 {
+    color: var(--color-blue);
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 400;
 }
